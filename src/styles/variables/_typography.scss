@@ -3,8 +3,17 @@ body {
   font-size: 16px;
   background-color: map-get($color, "magnolia");
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr min(968px, 96%) 1fr;
+  grid-template-rows: 1fr min(768px, 96%) 1fr;
   line-height: 1.25;
+  color: map-get($color, "marineBlue");
+}
+
+body > * {
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
 }

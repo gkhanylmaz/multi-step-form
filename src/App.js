@@ -2,11 +2,7 @@ import "./styles/main.scss";
 import MultiStepForm from "./components/MultiStepForm";
 
 function App() {
-  return (
-    <div>
-      <MultiStepForm />
-    </div>
-  );
+  return <MultiStepForm />;
 }
 
 export default App;

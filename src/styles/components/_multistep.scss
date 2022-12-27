@@ -1,8 +1,10 @@
 .multi-step {
   display: flex;
-  min-height: 70vh;
+  gap: 12px;
   padding: 12px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  gap: 20px;
-  min-width: 70vw;
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 80%;
+  width: 100%;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.05);
 }
