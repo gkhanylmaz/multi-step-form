@@ -1,0 +1,48 @@
+$bg-image: url("../../assets/images/bg-sidebar-desktop.svg");
+.sidebar {
+  background-image: $bg-image;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 60vh;
+  min-width: 20vw;
+  border-radius: 12px;
+  color: white;
+  .sidebar-table {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 50px 40px;
+
+    .sidebar-table-icon {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      border: 1px solid map-get($color, "white");
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-family: "Ubuntu", sans-serif;
+      &:hover {
+        background-color: map-get($color, "lightBlue");
+        color: map-get($color, "marineBlue");
+        cursor: pointer;
+      }
+    }
+
+    .sidebar-title {
+      h5 {
+        font-size: 13px;
+        font-weight: 400;
+        color: map-get($color, "coolGray");
+        font-family: "Ubuntu", sans-serif;
+        margin-bottom: 5px;
+      }
+      h4 {
+        font-weight: 600;
+        font-family: "Ubuntu", sans-serif;
+      }
+    }
+  }
+}

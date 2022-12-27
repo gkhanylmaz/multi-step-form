@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
-$ubuntu: "Ubuntu", sans-serif;
-
 body {
-  font-family: $ubuntu;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  background-color: map-get($color, "magnolia");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.25;
 }
