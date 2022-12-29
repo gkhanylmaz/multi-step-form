@@ -1,4 +1,5 @@
 import React from "react";
+import Step from "./Step";
 
 const step1 = [
   {
@@ -29,13 +30,9 @@ const step1 = [
   },
 ];
 
-const Step1 = () => {
+const Step1 = (props) => {
   return (
-    <div className="step1">
-      <div className="step1-header">
-        <h1> Personal info</h1>
-        <p>Please provide your name, email address, and phone number</p>
-      </div>
+    <Step {...props}>
       {step1.map((step) => (
         <form>
           <label>{step.label}</label>
@@ -46,11 +43,7 @@ const Step1 = () => {
           />
         </form>
       ))}
-      <div className="step1-footer">
-        <button className="step1-goback"> Go Back </button>
-        <button className="step1-next"> Next Step </button>
-      </div>
-    </div>
+    </Step>
   );
 };
 
