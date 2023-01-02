@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Step from "./Step";
 
 const Step3Item = [
@@ -23,6 +23,15 @@ const Step3Item = [
 ];
 
 const Step3 = (props) => {
+  const [selectedAddons, setSelectedAddons] = useState([]);
+
+  const changeSelected = (checked, selectedAddon) => {
+    if (checked) {
+      setSelectedAddons([...selectedAddons, selectedAddon]);
+    } else {
+      selectedAddons.filter((addon) => addon.id !== selectedAddon.id);
+    }
+  };
   return (
     <>
       <Step {...props}>
@@ -30,7 +39,10 @@ const Step3 = (props) => {
           {Step3Item.map((item) => (
             <div className="step3-card" key={item.id}>
               <label className="labelInput">
-                <input type="checkbox" checked="false" />
+                <input
+                  type="checkbox"
+                  onChange={(e) => changeSelected(e.target.checked, item)}
+                />
                 <span className="checkmark"></span>
               </label>
               <div className="step3-title">
