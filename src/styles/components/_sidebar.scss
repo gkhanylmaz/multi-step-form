@@ -23,11 +23,11 @@ $bg-image: url("../../assets/images/bg-sidebar-desktop.svg");
       justify-content: center;
       font-weight: 700;
       font-family: "Ubuntu", sans-serif;
-      &:hover {
-        background-color: map-get($color, "lightBlue");
-        color: map-get($color, "marineBlue");
-        cursor: pointer;
-      }
+    }
+    .icon-background {
+      background-color: map-get($color, "lightBlue");
+      color: map-get($color, "marineBlue");
+      cursor: pointer;
     }
 
     .sidebar-title {

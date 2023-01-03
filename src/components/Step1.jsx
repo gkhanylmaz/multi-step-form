@@ -34,7 +34,7 @@ const Step1 = (props) => {
   return (
     <Step {...props}>
       {step1.map((step) => (
-        <form>
+        <form key={step.id}>
           <label>{step.label}</label>
           <input
             type="text"

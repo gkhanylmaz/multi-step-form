@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const sidebarItem = [
   {
@@ -27,14 +27,18 @@ const sidebarItem = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ activeStep }) => {
   return (
     <div className="sidebar">
       {sidebarItem.map((item) => (
         <div className="sidebar-table" key={item.id}>
-          <div className="sidebar-table-icon">
-            <p>{item.number}</p>
-          </div>
+          <p
+            className={`sidebar-table-icon ${
+              activeStep === item.id ? "icon-background" : ""
+            }`}
+          >
+            {item.number}
+          </p>
           <div className="sidebar-title">
             <h5>{item.subtitle}</h5>
             <h4> {item.title}</h4>

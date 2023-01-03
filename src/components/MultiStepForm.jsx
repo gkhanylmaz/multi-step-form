@@ -35,14 +35,13 @@ const Steps = {
 };
 
 const MultiStepForm = () => {
-  const [activeStep, setActiveStep] = useState("step2");
-  const [formData, setFormData] = useState();
+  const [activeStep, setActiveStep] = useState("step1");
 
   const ActiveStep = Steps[activeStep].component;
 
   return (
     <div className="multi-step">
-      <Sidebar />
+      <Sidebar activeStep={activeStep} />
       <ActiveStep {...Steps[activeStep]} />
     </div>
   );
