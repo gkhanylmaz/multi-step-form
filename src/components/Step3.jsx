@@ -29,9 +29,16 @@ const Step3 = (props) => {
     if (checked) {
       setSelectedAddons([...selectedAddons, selectedAddon]);
     } else {
-      selectedAddons.filter((addon) => addon.id !== selectedAddon.id);
+      setSelectedAddons(
+        selectedAddons.filter((addon) => addon.id !== selectedAddon.id)
+      );
     }
   };
+
+  const checkSelected = (id) => selectedAddons.some((i) => i.id !== id);
+
+  console.log(selectedAddons);
+
   return (
     <>
       <Step {...props}>
@@ -40,9 +47,11 @@ const Step3 = (props) => {
             <div className="step3-card" key={item.id}>
               <label className="labelInput">
                 <input
+                  defaultChecked={checkSelected(item.id)}
                   type="checkbox"
                   onChange={(e) => changeSelected(e.target.checked, item)}
                 />
+
                 <span className="checkmark"></span>
               </label>
               <div className="step3-title">

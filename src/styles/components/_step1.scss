@@ -4,7 +4,9 @@
   margin: 60px 60px;
   gap: 20px;
   width: 100%;
-
+  .body {
+    flex: 1;
+  }
   .step1-header {
     h1 {
       font-weight: 700;
@@ -50,10 +52,6 @@
   }
   .step1-footer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 60px;
-
     .step1-goback {
       color: map-get($color, "coolGray");
       font-family: "Ubuntu", sans-serif;
