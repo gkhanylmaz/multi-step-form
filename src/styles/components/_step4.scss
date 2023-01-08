@@ -1,0 +1,36 @@
+.step4-table {
+  background-color: map-get($color, "lightGray");
+  .table {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .table-header {
+      .online-box {
+        color: map-get($color, "marineBlue");
+        font-weight: 700;
+        font-size: 18px;
+        font-family: "Ubuntu", sans-serif;
+        margin-bottom: 10px;
+      }
+      a {
+        color: map-get($color, "marineBlue");
+        font-size: 18px;
+      }
+    }
+    .cost {
+      color: map-get($color, "marineBlue");
+      font-weight: 700;
+      font-size: 18px;
+      font-family: "Ubuntu", sans-serif;
+    }
+  }
+  .label {
+    width: 90%;
+    height: 1px;
+    background-color: gray;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
